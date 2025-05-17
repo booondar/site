@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь - Booondar Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Booondar Shop</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="feedback.html">Обратная связь</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="feedback-container">
+        <h2 class="feedback-title">Форма обратной связи</h2>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name">Ваше имя</label>
+                <input type="text" id="name" placeholder="Как к вам обращаться?" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="example@mail.com" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Ваше сообщение</label>
+                <textarea id="message" rows="5" placeholder="Напишите ваш вопрос или предложение..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Отправить сообщение</button>
+        </form>
+    </section>
+
+    <div id="responseModal" class="modal-overlay">
+        <div class="modal-box">
+            <span class="modal-close">&times;</span>
+            <div class="modal-icon">✓</div>
+            <h3 class="modal-title">Спасибо за обратную связь!</h3>
+            <div id="modalMessage" class="modal-message"></div>
+            <div class="modal-footer">
+                <button class="submit-btn modal-close-btn">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
